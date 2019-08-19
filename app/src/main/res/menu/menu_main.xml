@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.example.ecommerce.MainActivity">
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/action_home"
+              android:title="Home"
+              android:icon="@drawable/ic_home_black_24dp"
+              android:orderInCategory="100"
+              app:showAsAction="never"/>
+
+        <item android:id="@+id/action_settings"
+              android:title="@string/action_settings"
+              android:icon="@drawable/ic_settings_black_24dp"
+              android:orderInCategory="100"
+              app:showAsAction="never"/>
+
+        <item android:id="@+id/action_jeans"
+              android:title="jeans"
+              android:icon="@drawable/ic_settings_black_24dp"
+              android:orderInCategory="100"
+              app:showAsAction="never"/>
+    </group>
+
+</menu>
