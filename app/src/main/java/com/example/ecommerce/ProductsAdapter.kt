@@ -10,7 +10,7 @@ import com.example.ecommerce.ProductsAdapter.ViewHolder
 import com.example.ecommerce.model.Product
 import com.squareup.picasso.Picasso
 
-class ProductsAdapter(private val products: List<Product>): RecyclerView.Adapter<ViewHolder>()
+class ProductsAdapter(private val products: List<Product>):RecyclerView.Adapter<ProductsAdapter.ViewHolder>()
 {
 
 
@@ -23,14 +23,13 @@ class ProductsAdapter(private val products: List<Product>): RecyclerView.Adapter
             parent.context.startActivity(intent)
             intent.putExtra("name",products[holder.adapterPosition].tittle)
             intent.putExtra("Photo_url",products[holder.adapterPosition].photoUrl)
-            intent.putExtra("name",products[holder.adapterPosition].price)
         }
         return holder
     }
 
     override fun getItemCount() =products.size
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ProductsAdapter.ViewHolder, position: Int) {
         val product=products[position]
         Picasso.get().load(product.photoUrl).into(holder.image)
         holder.tittle.text=product.tittle
