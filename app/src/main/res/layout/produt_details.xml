@@ -6,12 +6,11 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <ImageView android:layout_width="303dp"
+    <ImageView android:layout_width="328dp"
                android:layout_marginTop="50dp"
                android:layout_marginLeft="50dp"
                android:id="@+id/photo"
-               android:scaleType="fitCenter"
-               android:src="@drawable/shirt"
+               android:scaleType="centerCrop"
                android:layout_height="357dp"/>
 
     <TextView android:layout_width="wrap_content"

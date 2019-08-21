@@ -17,10 +17,12 @@ class ProductsAdapter(private val products: List<Product>): RecyclerView.Adapter
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view =LayoutInflater.from(parent.context).inflate(R.layout.products_row,parent,false)
         val holder=ViewHolder(view)
+        // making your api clickable and being able to proceed to the next intent
         view.setOnClickListener {
             val intent=Intent(parent.context, ProdutDetails::class.java)
             parent.context.startActivity(intent)
             intent.putExtra("name",products[holder.adapterPosition].tittle)
+            intent.putExtra("Photo_url",products[holder.adapterPosition].photoUrl)
             intent.putExtra("name",products[holder.adapterPosition].price)
         }
         return holder

@@ -29,6 +29,7 @@ class MainFragment:Fragment(){
                 root.recycler_view.apply {
                     layoutManager = GridLayoutManager(activity,2)
                      adapter =ProductsAdapter(products)
+                    root.Progress_bar.visibility = View.GONE
                 }
 
 
