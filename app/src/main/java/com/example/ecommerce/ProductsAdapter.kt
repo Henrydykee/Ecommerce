@@ -26,7 +26,6 @@ class ProductsAdapter(private val products: List<Product>):RecyclerView.Adapter<
         }
         return holder
     }
-
     override fun getItemCount() =products.size
 
     override fun onBindViewHolder(holder: ProductsAdapter.ViewHolder, position: Int) {
@@ -38,7 +37,7 @@ class ProductsAdapter(private val products: List<Product>):RecyclerView.Adapter<
     }
 
     class ViewHolder (itemView: View): RecyclerView.ViewHolder(itemView) {
-        val image: ImageView =itemView.findViewById(R.id.photo)
+       val image: ImageView =itemView.findViewById(R.id.photo)
         val tittle: TextView =itemView.findViewById(R.id.title)
         val price: TextView=itemView.findViewById(R.id.price)
     }
